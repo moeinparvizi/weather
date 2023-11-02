@@ -1,20 +1,23 @@
 export default function Weather({ image }) {
-  const apikey = "303e94191e8dc309c73f3faba0936d35";
 
-  function search(){
-    alert('every thinks is ok')
+  async function search(inp) {
+    const apikey = "303e94191e8dc309c73f3faba0936d35";
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon=${inp}&appid=${apikey}`;
+    const fetchUrl = await fetch(url)
+    const reg = await fetchUrl.json()
+    console.log(reg);
   }
 
   function regTest() {
     const inp = document.querySelector(".top-bar-getcity").value;
-    const reg = /^[a-z0-9_-]{3,15}$/
+    const reg = /^[a-z0-9_-]{3,15}$/;
     if (inp == "" || inp == null) {
       alert("Please enter a city name");
     } else {
       if (reg.test(inp)) {
-        search()
-      }else{
-        alert('dorost vared kon')
+        search(inp);
+      } else {
+        alert("dorost vared kon");
       }
     }
   }
