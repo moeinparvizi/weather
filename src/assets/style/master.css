@@ -52,6 +52,13 @@
         color: #f5f3f4;
         font-family: normalam;
         transition: 1s; }
+        @media only screen and (max-width: 1140px) {
+          .container > .container-weather > .top-bar > .top-bar-getcity {
+            height: 55px; } }
+        @media only screen and (max-width: 850px) {
+          .container > .container-weather > .top-bar > .top-bar-getcity {
+            height: 40px;
+            top: -3%; } }
         .container > .container-weather > .top-bar > .top-bar-getcity::placeholder {
           color: #fff; }
         .container > .container-weather > .top-bar > .top-bar-getcity:focus {
@@ -67,8 +74,16 @@
         border-radius: 40px;
         background-color: #b1a7a6;
         color: #f5f3f4;
-        transition: .3s;
+        transition: 0.3s;
         box-shadow: inset 0 0 31px -1.5px #660708; }
+        @media only screen and (max-width: 1140px) {
+          .container > .container-weather > .top-bar > .top-bar-search {
+            width: 65px;
+            height: 65px; } }
+        @media only screen and (max-width: 850px) {
+          .container > .container-weather > .top-bar > .top-bar-search {
+            width: 55px;
+            height: 55px; } }
         .container > .container-weather > .top-bar > .top-bar-search:hover {
           background-color: #f5f3f4;
           color: #b1a7a6;
