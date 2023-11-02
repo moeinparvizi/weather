@@ -86,11 +86,15 @@ $white: #fff;
         }
         &::placeholder {
           color: $white;
+          transition: all linear .4s;
         }
         &:focus {
           background-color: $smoke;
           color: $silver;
           box-shadow: 0 0 31px -1.5px $white;
+          &::placeholder{
+            color: $blood;
+          }
         }
       }
       & > .top-bar-search {

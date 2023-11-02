@@ -67,11 +67,14 @@
             height: 45px;
             top: -3%; } }
         .container > .container-weather > .top-bar > .top-bar-getcity::placeholder {
-          color: #fff; }
+          color: #fff;
+          transition: all linear .4s; }
         .container > .container-weather > .top-bar > .top-bar-getcity:focus {
           background-color: #f5f3f4;
           color: #b1a7a6;
           box-shadow: 0 0 31px -1.5px #fff; }
+          .container > .container-weather > .top-bar > .top-bar-getcity:focus::placeholder {
+            color: #660708; }
       .container > .container-weather > .top-bar > .top-bar-search {
         display: grid;
         place-items: center;
