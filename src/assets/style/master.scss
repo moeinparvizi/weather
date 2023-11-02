@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//colors
+$bg: #0b090a;
+$parent: #161a1d;
+$blood: #660708;
+$silver: #b1a7a6;
+$smoke: #f5f3f4;
+$white: #fff;
+
+// add fonts
+@font-face {
+  font-family: boldam;
+  src: url("../fonts/Raleway-ExtraBold.ttf");
+}
+@font-face {
+  font-family: normalam;
+  src: url("../fonts/Raleway-Medium.ttf");
+}
+.container {
+  background: $bg;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  & > .container-weather {
+    width: 40%;
+    height: 70%;
+    border-radius: 30px;
+    background: $parent;
+    background: -webkit-linear-gradient(0deg, $parent 0%, $blood 100%);
+    background: linear-gradient(0deg, $parent 0%, $blood 100%);
+    -webkit-box-shadow: 0 -15.5px 31px -1.5px $blood;
+    -moz-box-shadow: 0 -15.5px 31px -1.5px $blood;
+    box-shadow: 0 -15.5px 31px -1.5px $blood;
+    position: relative;
+    // responsive container
+    @media only screen and (max-width:1140px) {
+        width: 60%;
+    }
+    @media only screen and (max-width:850px) {
+        width: 90%;
+    }
+    & > .top-bar {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      padding-top: 60px;
+      & > .top-bar-getcity {
+        // ?input
+        width: 80%;
+        height: 75px;
+        border-radius: 40px;
+        padding-left: 40px;
+        position: absolute;
+        top: -5%;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 20px;
+        background-color: $silver;
+        color: $smoke;
+        font-family: normalam;
+        transition: 1s;
+        &::placeholder {
+          color: $white;
+        }
+        &:focus {
+          background-color: $smoke;
+          color: $silver;
+          box-shadow: 0 0 31px -1.5px $white;
+        }
+      }
+      & > .top-bar-search {
+        display: grid;
+        place-items: center;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        border-radius: 40px;
+        background-color: $silver;
+        color: $smoke;
+        transition: .3s;
+        box-shadow: inset 0 0 31px -1.5px $blood;
+        &:hover {
+          background-color: $smoke;
+          color: $silver;
+          box-shadow: 0 0 31px -1.5px $smoke;
+        }
+      }
+    }
+  }
+}

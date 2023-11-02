@@ -1,3 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+@font-face {
+  font-family: boldam;
+  src: url("../fonts/Raleway-ExtraBold.ttf"); }
+@font-face {
+  font-family: normalam;
+  src: url("../fonts/Raleway-Medium.ttf"); }
+.container {
+  background: #0b090a;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh; }
+  .container > .container-weather {
+    width: 40%;
+    height: 70%;
+    border-radius: 30px;
+    background: #161a1d;
+    background: -webkit-linear-gradient(0deg, #161a1d 0%, #660708 100%);
+    background: linear-gradient(0deg, #161a1d 0%, #660708 100%);
+    -webkit-box-shadow: 0 -15.5px 31px -1.5px #660708;
+    -moz-box-shadow: 0 -15.5px 31px -1.5px #660708;
+    box-shadow: 0 -15.5px 31px -1.5px #660708;
+    position: relative; }
+    @media only screen and (max-width: 1140px) {
+      .container > .container-weather {
+        width: 60%; } }
+    @media only screen and (max-width: 850px) {
+      .container > .container-weather {
+        width: 90%; } }
+    .container > .container-weather > .top-bar {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      padding-top: 60px; }
+      .container > .container-weather > .top-bar > .top-bar-getcity {
+        width: 80%;
+        height: 75px;
+        border-radius: 40px;
+        padding-left: 40px;
+        position: absolute;
+        top: -5%;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 20px;
+        background-color: #b1a7a6;
+        color: #f5f3f4;
+        font-family: normalam;
+        transition: 1s; }
+        .container > .container-weather > .top-bar > .top-bar-getcity::placeholder {
+          color: #fff; }
+        .container > .container-weather > .top-bar > .top-bar-getcity:focus {
+          background-color: #f5f3f4;
+          color: #b1a7a6;
+          box-shadow: 0 0 31px -1.5px #fff; }
+      .container > .container-weather > .top-bar > .top-bar-search {
+        display: grid;
+        place-items: center;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        border-radius: 40px;
+        background-color: #b1a7a6;
+        color: #f5f3f4;
+        transition: .3s;
+        box-shadow: inset 0 0 31px -1.5px #660708; }
+        .container > .container-weather > .top-bar > .top-bar-search:hover {
+          background-color: #f5f3f4;
+          color: #b1a7a6;
+          box-shadow: 0 0 31px -1.5px #f5f3f4; }
 
 /*# sourceMappingURL=master.css.map */
