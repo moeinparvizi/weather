@@ -33,6 +33,32 @@ function App() {
             />
           </figure>
         </div>
+        <div className="weather-show">
+          <figure className="show-image">
+            <img src={cloudImage} alt="" />
+          </figure>
+          <span className="show-grad">24c</span>
+          <span className="show-location">tehran</span>
+          <div className="data-container">
+
+            <div className="element">
+              <img src={humidityImage} className="icon" alt="" />
+              <div className="data">
+                <div className="humidity-percent">64%</div>
+                <div className="text">humidity</div>
+              </div>
+            </div>
+
+            <div className="element">
+              <img src={windImage} className="icon" alt="" />
+              <div className="data">
+                <div className="humidity-percent">18 km/h</div>
+                <div className="text">wind speed</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </section>
     </main>
   );

@@ -30,6 +30,8 @@ $white: #fff;
   & > .container-weather {
     width: 40%;
     height: 70%;
+    // display: grid;
+    // place-items: center;
     border-radius: 30px;
     background: $parent;
     background: -webkit-linear-gradient(0deg, $parent 0%, $blood 100%);
@@ -43,7 +45,16 @@ $white: #fff;
       width: 60%;
     }
     @media only screen and (max-width: 850px) {
-      width: 90%;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        .top-bar-getcity{
+            top: 90% !important;
+        }
+        .top-bar-search {
+            transform: translateY(1150%);
+        }
     }
     & > .top-bar {
       display: flex;
@@ -70,7 +81,7 @@ $white: #fff;
           height: 55px;
         }
         @media only screen and (max-width: 850px) {
-          height: 40px;
+          height: 45px;
           top: -3%;
         }
         &::placeholder {
@@ -107,6 +118,40 @@ $white: #fff;
           box-shadow: 0 0 31px -1.5px $smoke;
         }
       }
+    }
+    &>.weather-show{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        // &>.show-image{
+        //     margin-bottom: 30px;
+        // }
+        &>.show-grad{
+            font-size: 80px;
+            font-family: boldam;
+            color: $silver;
+        }
+        &>.show-location{
+            font-size: 40px;
+            font-family: boldam;
+            color: $silver;
+        }
+        &>.data-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+            width: 100%;
+            &>.element{
+                display: grid;
+                place-items: center;
+                color: $white;
+                display: flex;
+                gap: 15px;
+                margin-top: 30px;
+                font-family: normalam;
+            }
+        }
     }
   }
 }
