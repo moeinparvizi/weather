@@ -65,8 +65,9 @@ moein parvizi
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Screenshot from 2023-11-02 15-49-01](https://github.com/moeinparvizi/weather/assets/38692466/4599df68-c5da-4793-87a6-8c5a2619c754)
-![Screenshot from 2023-11-02 15-49-10](https://github.com/moeinparvizi/weather/assets/38692466/c7b74081-081f-4441-894e-fbc68fc2ec68)
+![Screenshot from 2023-11-03 18-18-53](https://github.com/moeinparvizi/weather/assets/38692466/ae8c8b8d-3c07-4fbc-845a-fa3f60c815a7)
+![Screenshot from 2023-11-03 18-21-07](https://github.com/moeinparvizi/weather/assets/38692466/73212dfe-fee1-46f0-aa01-7d7bc5c6d0b5)
+
 
 Hints :
 * first project with react
