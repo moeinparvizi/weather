@@ -27,7 +27,7 @@ moein parvizi
     <a href="https://github.com/moeinparvizi/weather"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://weather-alpha-peach.vercel.app/">View Demo</a>
+    <a href="https://weather-plum-omega.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/moeinparvizi/weather/issues">Report Bug</a>
     ·
