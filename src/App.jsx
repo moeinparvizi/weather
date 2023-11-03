@@ -5,36 +5,29 @@ import "./assets/style/master.css";
 // components import
 import Weather from "./Components/weather";
 // import images
-import searchImage from "./assets/images/search.png";
-import clearImage from "./assets/images/clear.png";
-import windImage from "./assets/images/wind.png";
-import snowImage from "./assets/images/snow.png";
-import drizzleImage from "./assets/images/drizzle.png";
 import humidityImage from "./assets/images/humidity.png";
-import rainImage from "./assets/images/rain.png";
-import cloudImage from "./assets/images/cloud.png";
-
+import windImage from "./assets/images/wind.png";
 function App() {
   // states for showing data
   const [cityName, setCityName] = useState("enter your city");
   const [humidity, setHumidity] = useState("0");
   const [wind, setWind] = useState("0");
   const [temp, setTemp] = useState("0");
-  // const [icon , setIcon] = useSt
+  const [icon , setIcon] = useState('')
   return (
     <main className="container">
       <section className="container-weather">
         <Weather
-          image={searchImage}
           onSetTemp={setTemp}
           onSetWind={setWind}
           onSetCityName={setCityName}
           onSetHumidity={setHumidity}
+          onSetIcon={setIcon}
         />
 
         <div className="weather-show">
           <figure className="show-image">
-            <img src={cloudImage} alt="" />
+            <img src={icon} alt="" />
           </figure>
           <span className="show-grad">{temp}c</span>
           <span className="show-location">{cityName}</span>
