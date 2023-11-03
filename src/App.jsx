@@ -1,7 +1,9 @@
-// import React from 'react'
+// react import
+import { useState } from "react";
+// style import
 import "./assets/style/master.css";
-import Weather from './Components/weather'
-
+// components import
+import Weather from "./Components/weather";
 // import images
 import searchImage from "./assets/images/search.png";
 import clearImage from "./assets/images/clear.png";
@@ -12,24 +14,35 @@ import humidityImage from "./assets/images/humidity.png";
 import rainImage from "./assets/images/rain.png";
 import cloudImage from "./assets/images/cloud.png";
 
-
 function App() {
+  // states for showing data
+  const [cityName, setCityName] = useState("enter your city");
+  const [humidity, setHumidity] = useState("0");
+  const [wind, setWind] = useState("0");
+  const [temp, setTemp] = useState("0");
+  // const [icon , setIcon] = useSt
   return (
     <main className="container">
       <section className="container-weather">
-        <Weather image={searchImage} />
+        <Weather
+          image={searchImage}
+          onSetTemp={setTemp}
+          onSetWind={setWind}
+          onSetCityName={setCityName}
+          onSetHumidity={setHumidity}
+        />
+
         <div className="weather-show">
           <figure className="show-image">
             <img src={cloudImage} alt="" />
           </figure>
-          <span className="show-grad">24c</span>
-          <span className="show-location">tehran</span>
+          <span className="show-grad">{temp}c</span>
+          <span className="show-location">{cityName}</span>
           <div className="data-container">
-
             <div className="element">
               <img src={humidityImage} className="icon" alt="" />
               <div className="data">
-                <div className="humidity-percent">64%</div>
+                <div className="humidity-percent">{humidity}%</div>
                 <div className="text">humidity</div>
               </div>
             </div>
@@ -37,11 +50,10 @@ function App() {
             <div className="element">
               <img src={windImage} className="icon" alt="" />
               <div className="data">
-                <div className="humidity-percent">18 km/h</div>
+                <div className="wind-rate">{wind} km/h</div>
                 <div className="text">wind speed</div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
