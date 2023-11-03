@@ -44,17 +44,28 @@ $white: #fff;
     @media only screen and (max-width: 1140px) {
       width: 60%;
     }
+    @media only screen and (max-width: 1400px) {
+      width: 60%;
+      @media only screen and (max-height: 850px) {
+        height: 90%;
+      }
+    }
     @media only screen and (max-width: 850px) {
-        overflow: hidden;
-        width: 100vw;
-        height: 100vh;
-        border-radius: 0;
-        .top-bar-getcity{
-            top: 90% !important;
-        }
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      .top-bar-getcity {
+        top: 90% !important;
+      }
+      .top-bar-search {
+        transform: translateY(1150%);
+      }
+      @media only screen and (max-height: 837px) {
         .top-bar-search {
-            transform: translateY(1150%);
+          transform: translateY(0%);
         }
+      }
     }
     & > .top-bar {
       display: flex;
@@ -86,13 +97,13 @@ $white: #fff;
         }
         &::placeholder {
           color: $white;
-          transition: all linear .4s;
+          transition: all linear 0.4s;
         }
         &:focus {
           background-color: $smoke;
           color: $silver;
           box-shadow: 0 0 31px -1.5px $white;
-          &::placeholder{
+          &::placeholder {
             color: $blood;
           }
         }
@@ -123,39 +134,39 @@ $white: #fff;
         }
       }
     }
-    &>.weather-show{
+    & > .weather-show {
+      width: 100%;
+      display: grid;
+      place-items: center;
+      // &>.show-image{
+      //     margin-bottom: 30px;
+      // }
+      & > .show-grad {
+        font-size: 80px;
+        font-family: boldam;
+        color: $silver;
+      }
+      & > .show-location {
+        font-size: 40px;
+        font-family: boldam;
+        color: $silver;
+      }
+      & > .data-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
         width: 100%;
-        display: grid;
-        place-items: center;
-        // &>.show-image{
-        //     margin-bottom: 30px;
-        // }
-        &>.show-grad{
-            font-size: 80px;
-            font-family: boldam;
-            color: $silver;
+        & > .element {
+          display: grid;
+          place-items: center;
+          color: $white;
+          display: flex;
+          gap: 15px;
+          margin-top: 30px;
+          font-family: normalam;
         }
-        &>.show-location{
-            font-size: 40px;
-            font-family: boldam;
-            color: $silver;
-        }
-        &>.data-container{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: 20px;
-            width: 100%;
-            &>.element{
-                display: grid;
-                place-items: center;
-                color: $white;
-                display: flex;
-                gap: 15px;
-                margin-top: 30px;
-                font-family: normalam;
-            }
-        }
+      }
     }
   }
 }

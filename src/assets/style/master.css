@@ -29,6 +29,13 @@
     @media only screen and (max-width: 1140px) {
       .container > .container-weather {
         width: 60%; } }
+    @media only screen and (max-width: 1400px) {
+      .container > .container-weather {
+        width: 60%; } }
+  @media only screen and (max-width: 1400px) and (max-height: 850px) {
+    .container > .container-weather {
+      height: 90%; } }
+
     @media only screen and (max-width: 850px) {
       .container > .container-weather {
         overflow: hidden;
@@ -39,6 +46,10 @@
           top: 90% !important; }
         .container > .container-weather .top-bar-search {
           transform: translateY(1150%); } }
+  @media only screen and (max-width: 850px) and (max-height: 837px) {
+    .container > .container-weather .top-bar-search {
+      transform: translateY(0%); } }
+
     .container > .container-weather > .top-bar {
       display: flex;
       justify-content: center;
@@ -68,7 +79,7 @@
             top: -3%; } }
         .container > .container-weather > .top-bar > .top-bar-getcity::placeholder {
           color: #fff;
-          transition: all linear .4s; }
+          transition: all linear 0.4s; }
         .container > .container-weather > .top-bar > .top-bar-getcity:focus {
           background-color: #f5f3f4;
           color: #b1a7a6;
